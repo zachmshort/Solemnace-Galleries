@@ -6,7 +6,7 @@ Gallery.hasMany(Figurine, {
   foreignKey: 'gallery_id',
 });
 
-Painting.belongsTo(Gallery, {
+Figurine.belongsTo(Gallery, {
   foreignKey: 'gallery_id',
 });
 
