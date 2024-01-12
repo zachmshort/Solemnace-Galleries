@@ -1,4 +1,4 @@
-const { Figurines } = require("../models");
+const { Figurine } = require('../models');
 
 const figurineData = [
   {
@@ -10,16 +10,18 @@ const figurineData = [
     store_link: "",
   },
   {
+    //removed null from price
     product_name: "Terminator Captain",
-    price: null,
+    price: 0,
     edition: 10,
     filename: "10thtermiecapt.jpg",
     faction: "Space Marines",
     store_link: "",
   },
   {
+    //removed null from price
     product_name: "Titus",
-    price: null,
+    price: 0,
     edition: 10,
     filename: "titus.jpg",
     faction: "Space Marines",
@@ -867,6 +869,6 @@ const figurineData = [
   },
 ];
 
-const seedFigurines = () => Figurines.bulkCreate(figurineData);
+const seedFigurines = () => Figurine.bulkCreate(figurineData);
 
 module.exports = seedFigurines;
