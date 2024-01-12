@@ -36,6 +36,10 @@ Figurine.init(
       allowNull: false,
 
       },
+    store_link: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        },
     },
   {
     sequelize,
