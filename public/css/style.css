@@ -12,37 +12,29 @@
 .navImg {
     max-width: 9rem;
     max-height: 9rem;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     margin-left: 1rem;
     margin-top: 1rem;
 
 }
 
-.navImg:hover {
-    opacity: 80%;
-}
-
 .dropdown-items {
     z-index: 2;
-    position: relative;
+    position: absolute;
+    top: 10rem;
+    line-height: 5rem;
+    right: -8rem;
+    font-size: 2rem;
+    font-family: 'Pirata One', system-ui;;
 }
+
 .dropdown-items ul {
-    z-index: 2;
     list-style: none;
 }
 
-.dropdown-items ul li {
-    z-index: 2;
-}
-
-.dropdown-items ul li a {
-    z-index: 2;
-}
-
-.dropdown-item {
-    z-index: 2;
-    color: aliceblue;
+.navImg:hover {
+    opacity: 80%;
 }
 
 .navImgDropDown {
