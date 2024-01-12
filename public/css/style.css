@@ -5,6 +5,50 @@
     height: 100vh;
 }
 
+.navContainer {
+    position: absolute;
+}
+
 .navImg {
-    background-image: url('/images/purity-seal.png');
+    max-width: 9rem;
+    max-height: 9rem;
+    z-index: 3;
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+}
+
+.navImg:hover {
+    opacity: 80%;
+}
+
+.dropdown-items {
+    z-index: 2;
+}
+.dropdown-items ul {
+    z-index: 2;
+    list-style: none;
+}
+
+.dropdown-items ul li {
+    z-index: 2;
+}
+
+.dropdown-items ul li a {
+    z-index: 2;
+}
+
+.dropdown-item {
+    z-index: 2;
+    color: aliceblue;
+}
+
+.navImgDropDown {
+    max-width: 25rem;
+    max-height: 25rem;
+    z-index: 1;
+    position: absolute;
+    margin-left: .5rem;
+    top: 5rem;
 }
