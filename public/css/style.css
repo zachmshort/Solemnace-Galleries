@@ -1,10 +1,47 @@
 .page {
-    background-image: url('/images/warhammer_homepage.jpg'); /* Relative path from the root */
+    background-image: url('/images/warhammer_homepage.jpg'); 
     background-size: cover;
     margin: 0;
     height: 100vh;
 }
 
+.navContainer {
+    position: absolute;
+}
+
 .navImg {
-    background-image: url('/images/purity-seal.png');
+    max-width: 9rem;
+    max-height: 9rem;
+    z-index: 2;
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+}
+
+.dropdown-items {
+    z-index: 2;
+    position: absolute;
+    top: 10rem;
+    line-height: 5rem;
+    right: -8rem;
+    font-size: 2rem;
+    font-family: 'Pirata One', system-ui;;
+}
+
+.dropdown-items ul {
+    list-style: none;
+}
+
+.navImg:hover {
+    opacity: 80%;
+}
+
+.navImgDropDown {
+    max-width: 25rem;
+    max-height: 25rem;
+    z-index: 1;
+    position: absolute;
+    margin-left: .5rem;
+    top: 5rem;
 }
