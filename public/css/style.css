@@ -26,15 +26,22 @@
     line-height: 5rem;
     right: -8rem;
     font-size: 2rem;
-    font-family: 'Pirata One', system-ui;;
+    font-family: 'Pirata One', system-ui, sans-serif;
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in-out;
 }
 
 .dropdown-items ul {
     list-style: none;
 }
 
+.dropdown-items ul li a:hover {
+    filter: brightness(3);
+}
+
 .navImg:hover {
-    opacity: 80%;
+    filter: brightness(1.4);
 }
 
 .navImgDropDown {
@@ -44,4 +51,12 @@
     position: absolute;
     margin-left: .5rem;
     top: 5rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.navContainer.active .dropdown-items,
+.navContainer.active .navImgDropDown {
+    opacity: 1;
 }
