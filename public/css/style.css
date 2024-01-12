@@ -1,0 +1,10 @@
+.page {
+    background-image: url('/images/warhammer_homepage.jpg'); /* Relative path from the root */
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+.navImg {
+    background-image: url('/images/purity-seal.png');
+}
