@@ -1,6 +1,5 @@
 const { Figurine } = require('../models');
 
-
 const figurineData = [
   {
     product_name: "Space Marine Scouts",
@@ -8,6 +7,7 @@ const figurineData = [
     edition: 10,
     filename: "10thscouts.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     //removed null from price
@@ -16,6 +16,7 @@ const figurineData = [
     edition: 10,
     filename: "10thtermiecapt.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     //removed null from price
@@ -24,6 +25,7 @@ const figurineData = [
     edition: 10,
     filename: "titus.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "company heroes",
@@ -31,6 +33,7 @@ const figurineData = [
     edition: 10,
     filename: "coheroes.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "terminator squad",
@@ -38,6 +41,7 @@ const figurineData = [
     edition: 10,
     filename: "termies.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "terminator assault squad",
@@ -45,6 +49,7 @@ const figurineData = [
     edition: 10,
     filename: "termieassault.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "sterngaurd veterans",
@@ -52,6 +57,7 @@ const figurineData = [
     edition: 10,
     filename: "sterngaurdvet.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "jump pack intercessors",
@@ -59,6 +65,7 @@ const figurineData = [
     edition: 10,
     filename: "jumpyinters.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "jump pack captain",
@@ -66,6 +73,7 @@ const figurineData = [
     edition: 10,
     filename: "packcapt.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "terminator chaplain",
@@ -73,6 +81,7 @@ const figurineData = [
     edition: 10,
     filename: "termiechap.jpg",
     faction: "Space Marines",
+    store_link: "",
   },
   {
     product_name: "morvenn vahl",
@@ -80,6 +89,7 @@ const figurineData = [
     edition: 9,
     filename: "morvenn.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "palatine",
@@ -87,6 +97,7 @@ const figurineData = [
     edition: 9,
     filename: "palatine.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "aestred thurag",
@@ -94,6 +105,7 @@ const figurineData = [
     edition: 9,
     filename: "aestred.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "sister dogmata",
@@ -101,6 +113,7 @@ const figurineData = [
     edition: 9,
     filename: "dogmata.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "celestian sacrestants",
@@ -108,6 +121,7 @@ const figurineData = [
     edition: 9,
     filename: "sacrestants.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "paragon warsuits",
@@ -115,6 +129,7 @@ const figurineData = [
     edition: 9,
     filename: "pgwarsuit.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "castigator battle tank",
@@ -122,6 +137,7 @@ const figurineData = [
     edition: 9,
     filename: "castigator.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "kill team novitiates",
@@ -129,6 +145,7 @@ const figurineData = [
     edition: 9,
     filename: "novitiates.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "blade champion",
@@ -136,6 +153,7 @@ const figurineData = [
     edition: 9,
     filename: "bladechamp.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "sydonian skatros",
@@ -143,6 +161,7 @@ const figurineData = [
     edition: 10,
     filename: "skatros.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "skitarii marshall",
@@ -150,6 +169,7 @@ const figurineData = [
     edition: 9,
     filename: "skitmarsh.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "commisar",
@@ -157,6 +177,7 @@ const figurineData = [
     edition: 9,
     filename: "commisar.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "minka lesk",
@@ -164,6 +185,7 @@ const figurineData = [
     edition: 9,
     filename: "minka.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "kasrkin kill team",
@@ -171,6 +193,7 @@ const figurineData = [
     edition: 9,
     filename: "kasrkin.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "cadian command squad",
@@ -178,6 +201,7 @@ const figurineData = [
     edition: 9,
     filename: "cadiancommsq.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "cadian shock troops",
@@ -185,6 +209,7 @@ const figurineData = [
     edition: 9,
     filename: "cadianshock.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "armored sentinel",
@@ -192,6 +217,7 @@ const figurineData = [
     edition: 9,
     filename: "armsent.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "scout sentinel",
@@ -199,6 +225,7 @@ const figurineData = [
     edition: 9,
     filename: "scoutsent.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "ursula creed",
@@ -206,6 +233,7 @@ const figurineData = [
     edition: 9,
     filename: "ursula.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "heavy weapons squad",
@@ -213,6 +241,7 @@ const figurineData = [
     edition: 9,
     filename: "heavywepsq.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "cadian castellan",
@@ -220,6 +249,7 @@ const figurineData = [
     edition: 9,
     filename: "castellan.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "attilan rough riders",
@@ -227,6 +257,7 @@ const figurineData = [
     edition: 9,
     filename: "attilanriders.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "rogal dorn battle tank",
@@ -234,6 +265,7 @@ const figurineData = [
     edition: 9,
     filename: "rogdortank.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "lord solar leontus",
@@ -241,6 +273,7 @@ const figurineData = [
     edition: 9,
     filename: "leontus.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "vindicare assassin",
@@ -248,6 +281,7 @@ const figurineData = [
     edition: 9,
     filename: "vindicare.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "imperial navy breachers",
@@ -255,6 +289,7 @@ const figurineData = [
     edition: 9,
     filename: "navbreach.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "extraction squad",
@@ -262,6 +297,7 @@ const figurineData = [
     edition: 9,
     filename: "extrsq.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "inquisitorial agents",
@@ -269,6 +305,7 @@ const figurineData = [
     edition: 9,
     filename: "inqagent.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "armiger warglaives",
@@ -276,6 +313,7 @@ const figurineData = [
     edition: 8,
     filename: "warglaive.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "armiger helverins",
@@ -283,6 +321,7 @@ const figurineData = [
     edition: 8,
     filename: "helverin.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "knight castellan",
@@ -290,6 +329,7 @@ const figurineData = [
     edition: 8,
     filename: "knightcastellan.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "knight valiant",
@@ -297,6 +337,7 @@ const figurineData = [
     edition: 8,
     filename: "knightvaliant.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "knight preceptor",
@@ -304,6 +345,7 @@ const figurineData = [
     edition: 8,
     filename: "knightpreceptor.jpg",
     faction: "imperium armies",
+    store_link: "",
   },
   {
     product_name: "kill team: legionaries",
@@ -311,6 +353,7 @@ const figurineData = [
     edition: 9,
     filename: "legionaries.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "chaos chosen",
@@ -318,6 +361,7 @@ const figurineData = [
     edition: 9,
     filename: "chaoschosen.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "warpsmith",
@@ -325,6 +369,7 @@ const figurineData = [
     edition: 9,
     filename: "warpsmith.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "daemon prince",
@@ -332,6 +377,7 @@ const figurineData = [
     edition: 9,
     filename: "deamonprince.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "possessed",
@@ -339,6 +385,7 @@ const figurineData = [
     edition: 9,
     filename: "possessed.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "chaos cultists",
@@ -346,6 +393,7 @@ const figurineData = [
     edition: 9,
     filename: "chaoscult.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "dark commune",
@@ -353,6 +401,7 @@ const figurineData = [
     edition: 9,
     filename: "dkcomm.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "accursed cultists",
@@ -360,6 +409,7 @@ const figurineData = [
     edition: 9,
     filename: "acccult.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "blooded kill team",
@@ -367,6 +417,7 @@ const figurineData = [
     edition: 9,
     filename: "bloodkillteam.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "lord of virulence",
@@ -374,6 +425,7 @@ const figurineData = [
     edition: 9,
     filename: "lordvirulence.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "plague marines",
@@ -381,6 +433,7 @@ const figurineData = [
     edition: 9,
     filename: "plaguemar.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "lord felthius and the tainted cohort",
@@ -388,6 +441,7 @@ const figurineData = [
     edition: 9,
     filename: "lordfelthius.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "infernal master",
@@ -395,6 +449,7 @@ const figurineData = [
     edition: 9,
     filename: "infernalmas.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "azrakh the annihilator",
@@ -402,6 +457,7 @@ const figurineData = [
     edition: 9,
     filename: "azrakh.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "angron daemon primarch",
@@ -409,6 +465,7 @@ const figurineData = [
     edition: 9,
     filename: "angron.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "khorne berzerkers",
@@ -416,6 +473,7 @@ const figurineData = [
     edition: 9,
     filename: "kbzerk.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "lord invocatus",
@@ -423,6 +481,7 @@ const figurineData = [
     edition: 9,
     filename: "invocatus.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "chaos lord on daemonic mount",
@@ -430,6 +489,7 @@ const figurineData = [
     edition: 9,
     filename: "chaosmount.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "eightbounds",
@@ -437,6 +497,7 @@ const figurineData = [
     edition: 9,
     filename: "eightbound.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "exalted eightbounds",
@@ -444,6 +505,7 @@ const figurineData = [
     edition: 9,
     filename: "exeightbound.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "jakhals",
@@ -451,6 +513,7 @@ const figurineData = [
     edition: 9,
     filename: "jakhals.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "be'lakor, the dark master",
@@ -458,6 +521,7 @@ const figurineData = [
     edition: 9,
     filename: "belakor.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "vashtorr the arkifane",
@@ -465,6 +529,7 @@ const figurineData = [
     edition: 9,
     filename: "vashtorr.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "knight abominant",
@@ -472,6 +537,7 @@ const figurineData = [
     edition: 9,
     filename: "knightabominant.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "war dog karnivores",
@@ -479,6 +545,7 @@ const figurineData = [
     edition: 9,
     filename: "wardogkarn.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "war dog stalkers",
@@ -486,6 +553,7 @@ const figurineData = [
     edition: 9,
     filename: "wardogstalk.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "war dog brigands",
@@ -493,6 +561,7 @@ const figurineData = [
     edition: 9,
     filename: "wardogbrig.jpg",
     faction: "chaos marines",
+    store_link: "",
   },
   {
     product_name: "striking scorpions",
@@ -500,6 +569,7 @@ const figurineData = [
     edition: 10,
     filename: "strikscorp.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "lelith hesperax",
@@ -507,6 +577,7 @@ const figurineData = [
     edition: 9,
     filename: "lelith.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "harlequin troupe",
@@ -514,6 +585,7 @@ const figurineData = [
     edition: 7,
     filename: "harletroup.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "harlequin solitaire",
@@ -521,6 +593,7 @@ const figurineData = [
     edition: 7,
     filename: "harlsol.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "skyweavers",
@@ -528,6 +601,7 @@ const figurineData = [
     edition: 7,
     filename: "skyweavers.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "starweavers",
@@ -535,6 +609,7 @@ const figurineData = [
     edition: 7,
     filename: "starweavers.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "voidweavers",
@@ -542,6 +617,7 @@ const figurineData = [
     edition: 7,
     filename: "voidweavers.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "death jester",
@@ -549,6 +625,7 @@ const figurineData = [
     edition: 7,
     filename: "deathjester.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "shadowseer",
@@ -556,6 +633,7 @@ const figurineData = [
     edition: 7,
     filename: "shadowseer.jpg",
     faction: "aeldari",
+    store_link: "",
   },
   {
     product_name: "reductus saboteur",
@@ -563,6 +641,7 @@ const figurineData = [
     edition: 9,
     filename: "reductus.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "einhyr champion",
@@ -570,6 +649,7 @@ const figurineData = [
     edition: 10,
     filename: "einhyr.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "emotekh the stormlord",
@@ -577,6 +657,7 @@ const figurineData = [
     edition: 10,
     filename: "emotekh.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "overlord with translocation shroud",
@@ -584,6 +665,7 @@ const figurineData = [
     edition: 10,
     filename: "transoverlord.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "orikan the diviner",
@@ -591,6 +673,7 @@ const figurineData = [
     edition: 10,
     filename: "orikan.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "flayed ones",
@@ -598,6 +681,7 @@ const figurineData = [
     edition: 9,
     filename: "flayedone.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "chronomancer",
@@ -605,6 +689,7 @@ const figurineData = [
     edition: 9,
     filename: "chrono.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "szarekh, the silent king",
@@ -612,6 +697,7 @@ const figurineData = [
     edition: 9,
     filename: "szarek.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "c'tan shard of the void dragon",
@@ -619,6 +705,7 @@ const figurineData = [
     edition: 9,
     filename: "voidshard.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "monolith",
@@ -626,6 +713,7 @@ const figurineData = [
     edition: 9,
     filename: "monolith.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "canoptek doomstalker",
@@ -633,6 +721,7 @@ const figurineData = [
     edition: 9,
     filename: "doomstalker.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "hexmark destoryer",
@@ -640,6 +729,7 @@ const figurineData = [
     edition: 9,
     filename: "hexmark.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "ophidian destroyers",
@@ -647,6 +737,7 @@ const figurineData = [
     edition: 9,
     filename: "ophidian.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "psychomancer",
@@ -654,6 +745,7 @@ const figurineData = [
     edition: 9,
     filename: "psychomancer.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "lokhust heavy destroyer",
@@ -661,6 +753,7 @@ const figurineData = [
     edition: 9,
     filename: "lokhust.jpg",
     faction: "necron",
+    store_link: "",
   },
   {
     product_name: "boss snikrot",
@@ -668,6 +761,7 @@ const figurineData = [
     edition: 9,
     filename: "snikrot.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "ethereal",
@@ -675,6 +769,7 @@ const figurineData = [
     edition: 9,
     filename: "ethereal.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "pathfinders kill team",
@@ -682,6 +777,7 @@ const figurineData = [
     edition: 9,
     filename: "pathfinders.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "farstalker kinband",
@@ -689,6 +785,7 @@ const figurineData = [
     edition: 9,
     filename: "farstalker.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "hormagaunts",
@@ -696,6 +793,7 @@ const figurineData = [
     edition: 10,
     filename: "horma.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "genestealers",
@@ -703,6 +801,7 @@ const figurineData = [
     edition: 10,
     filename: "gene.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "lictor",
@@ -710,6 +809,7 @@ const figurineData = [
     edition: 10,
     filename: "lictor.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "nuerolictor",
@@ -717,6 +817,7 @@ const figurineData = [
     edition: 10,
     filename: "nuelic.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "deathleaper",
@@ -724,6 +825,7 @@ const figurineData = [
     edition: 10,
     filename: "deathleap.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "biovore",
@@ -731,6 +833,7 @@ const figurineData = [
     edition: 10,
     filename: "biovore.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "pyrovore",
@@ -738,6 +841,7 @@ const figurineData = [
     edition: 10,
     filename: "pyrovore.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "norn emissary",
@@ -745,6 +849,7 @@ const figurineData = [
     edition: 10,
     filename: "nornem.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "norn assimilator",
@@ -752,6 +857,7 @@ const figurineData = [
     edition: 10,
     filename: "nornas.jpg",
     faction: "xenos",
+    store_link: "",
   },
   {
     product_name: "termagaunts",
@@ -759,6 +865,7 @@ const figurineData = [
     edition: 10,
     filename: "termagaunts.jpg",
     faction: "xenos",
+    store_link: "",
   },
 ];
 
