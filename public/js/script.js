@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var opacity = 1;
       var interval = setInterval(function () {
         if (opacity > 0) {
-          opacity -= 0.125;
+          opacity -= 0.1;
           element.style.opacity = opacity;
         } else {
           element.style.display = 'none';
@@ -43,3 +43,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 100);
     }
   });
+
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slider = document.querySelector('.slider');
+    slider.style.transform = `translateX(${index * -100}vw)`;
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + 6) % 6;
+    showSlide(currentIndex);
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % 6;
+    showSlide(currentIndex);
+}
