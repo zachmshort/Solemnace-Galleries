@@ -150,9 +150,28 @@ z-index: 1;
     
 }
 
+<<<<<<< HEAD
 .galleryDiv ul li:hover {
     transition: transform 1s ease, color 1s ease;
     transform: translate(-5%, -5%);
     text-shadow: 
         5px 5px 0 blue;
+=======
+#slide5 {
+    background-image: url('/images/xenos.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+#slide6 {
+    background-image: url('/images/necron.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+.signUp {
+    text-align: center;
+>>>>>>> main
 }
