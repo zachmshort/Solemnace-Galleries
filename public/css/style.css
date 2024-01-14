@@ -5,6 +5,46 @@
     height: 100vh;
 }
 
+.page a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pirata One', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color:darkred;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(92, 0, 0, 0.434);
+    text-decoration: none;
+    filter: brightness(1.1);
+    z-index: 1; 
+    top:50%
+}
+
+.page a:hover  {
+    filter: brightness(1.4);
+}
+
+.title {
+position: absolute;
+margin-top: 1rem;
+left: 80%;
+font-family: 'Pirata One', system-ui, sans-serif;
+font-weight: 300;
+font-size: 3rem;
+color:darkred;
+letter-spacing: 1px;
+text-shadow: 2px 2px 4px rgba(92, 0, 0, 0.434);
+text-decoration: none;
+filter: brightness(1.1);
+z-index: 1;
+}
+
+.title:hover  {
+    filter: brightness(1.4);
+}
+
 .navContainer {
     position: absolute;
 }
@@ -26,15 +66,22 @@
     line-height: 5rem;
     right: -8rem;
     font-size: 2rem;
-    font-family: 'Pirata One', system-ui;;
+    font-family: 'Pirata One', system-ui, sans-serif;
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in-out;
 }
 
 .dropdown-items ul {
     list-style: none;
 }
 
+.dropdown-items ul li a:hover {
+    filter: brightness(3);
+}
+
 .navImg:hover {
-    opacity: 80%;
+    filter: brightness(1.4);
 }
 
 .navImgDropDown {
@@ -44,4 +91,107 @@
     position: absolute;
     margin-left: .5rem;
     top: 5rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.navContainer.active .dropdown-items,
+.navContainer.active .navImgDropDown {
+    opacity: 1;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.prev, .next {
+    position: absolute;
+    transform: translateY(-100%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    min-height: 100vh;
+    min-width: 10%;
+    padding-top: 3%;
+}
+
+.prev:hover, .next:hover {
+    filter: brightness(1.4);
+    background-color: white;
+    opacity: .2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.slide h1 {
+    text-align: center;
+}
+
+#slide1 {
+    background-image: url('/images/space-marines.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+#slide2 {
+    background-image: url('/images/armies-of-the-imperium-header.avif');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+#slide3 {
+    background-image: url('/images/chaos.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+#slide4 {
+    background-image: url('/images/aeldari.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+#slide5 {
+    background-image: url('/images/xenos.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+#slide6 {
+    background-image: url('/images/necron.jpg');
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
 }

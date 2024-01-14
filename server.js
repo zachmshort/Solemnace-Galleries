@@ -32,6 +32,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/factions', (req, res) => {
+  res.render('factions');
+});
+
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
