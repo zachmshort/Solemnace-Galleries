@@ -44,19 +44,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-let currentIndex = 0;
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.galleryDiv ul li a');
+    const page = document.querySelector('.galleryPage');
 
-function showSlide(index) {
-    const slider = document.querySelector('.slider');
-    slider.style.transform = `translateX(${index * -100}vw)`;
-}
+    links.forEach(link => {
+        link.addEventListener('mouseover', function () {
+            const color = link.classList[0];
+            page.style.backgroundColor = getColor(color);
+        });
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + 6) % 6;
-    showSlide(currentIndex);
-}
+        link.addEventListener('mouseout', function () {
+            page.style.backgroundColor = '#000'; // Reset to initial color on mouseout
+        });
+    });
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % 6;
-    showSlide(currentIndex);
-}
+    function getColor(category) {
+        switch (category) {
+          case 'Xenos':
+            return '#d8c6ff'; // Soft purple
+        case 'Chaos':
+            return '#ffe9a5'; // Soft gold
+        case 'spaceMarines':
+            return '#b3b3b3'; // Soft dark grey
+        case 'imperialArmies':
+            return '#b3ffb3'; // Soft neon green
+        case 'necron':
+            return '#b3b3ff'; // Soft blue
+        case 'aeldari':
+            return '#ffb3b3'; // Soft red
+            default:
+                return '#000'; 
+        }
+    }
+});
