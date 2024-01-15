@@ -119,8 +119,10 @@ z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 30vw;
-    max-height: 50vh;
-    opacity: 20%;
+    max-height: 60vh;
+    opacity: 25%;
+    min-width: 20vw;
+    min-height: 60vh;
 }
 
 .galleryDiv {
@@ -147,6 +149,7 @@ z-index: 1;
     -webkit-text-stroke-color: #f2eacb;
     transition: transform 1s ease;
     transition: text-shadow 1s ease;
+    line-height: 4rem;
 }
 
 .galleryDiv ul li:hover {
