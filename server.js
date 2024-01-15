@@ -37,8 +37,10 @@ app.get('/gallery', (req, res) => {
 });
 
 app.get('/all', (req, res) => {
-  res.render('all');
+  res.render('all'); // , { figurine/figurines?? }
 });
+
+
 
 app.use(routes);
 
