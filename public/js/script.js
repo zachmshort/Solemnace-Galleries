@@ -98,17 +98,5 @@ document.addEventListener('DOMContentLoaded', function () {
       mainImage.src = imagePath;
     } 
   }
-  // function hideOtherItems(selectedLink) {
-  //   links.forEach(link => {
-  //     if (link !== selectedLink) {
-  //       link.style.opacity = '0';
-  //     }
-  //   });
-  // }
 
-  // function showAllItems() {
-  //   links.forEach(link => {
-  //     link.style.opacity = '1';
-  //   });
-  // }
 });

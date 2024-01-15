@@ -33,8 +33,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/gallery', (req, res) => {
-  console.log('req gallery okay');
   res.render('gallery');
+});
+
+app.get('/all', (req, res) => {
+  res.render('all');
 });
 
 app.use(routes);
