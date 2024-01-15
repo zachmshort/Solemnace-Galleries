@@ -47,34 +47,55 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.galleryDiv ul li a');
     const page = document.querySelector('.galleryPage');
-
+    const mainImage = document.querySelector('.mainImage');
+    let currentFaction = ''
+    
     links.forEach(link => {
-        link.addEventListener('mouseover', function () {
-            const color = link.classList[0];
-            page.style.backgroundColor = getColor(color);
-        });
-
-        link.addEventListener('mouseout', function () {
-            page.style.backgroundColor = '#000'; // Reset to initial color on mouseout
-        });
+    link.addEventListener('mouseover', function () {
+        currentFaction = link.classList[0];
+        console.log('Current category:', currentFaction);
+        page.style.backgroundColor = getColor(currentFaction);
+        changeImage(currentFaction);
     });
+
+    link.addEventListener('mouseout', function () {
+        page.style.backgroundColor = '#000';
+    });
+});
 
     function getColor(category) {
         switch (category) {
-          case 'Xenos':
-            return '#d8c6ff'; // Soft purple
-        case 'Chaos':
-            return '#ffe9a5'; // Soft gold
+          case 'xenos':
+            return '#AF7D83'; 
+        case 'chaos':
+            return '#827F79'; 
         case 'spaceMarines':
-            return '#b3b3b3'; // Soft dark grey
+            return '#BF9B30'; 
         case 'imperialArmies':
-            return '#b3ffb3'; // Soft neon green
+            return '#677990'; 
         case 'necron':
-            return '#b3b3ff'; // Soft blue
+            return '#698174'; 
         case 'aeldari':
-            return '#ffb3b3'; // Soft red
+            return '#7A6E8D'; 
             default:
                 return '#000'; 
         }
     }
+
+    function changeImage(category) {
+      const categoryToImagePath = {
+        'xenos': '/images/xenos.png',
+        'chaos': '/images/chaos.png',
+        'spaceMarines': '/images/spacemarines.png',
+        'imperialArmies': '/images/imperialarmies.png',
+        'necron': '/images/necron.png',
+        'aeldari': '/images/aeldari.png',
+      };
+
+      if (categoryToImagePath.hasOwnProperty(category)) {
+        const imagePath = categoryToImagePath[category];
+        mainImage.src = imagePath;
+      } 
+    }
 });
+
