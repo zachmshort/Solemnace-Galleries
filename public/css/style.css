@@ -145,7 +145,7 @@ z-index: 1;
 .galleryDiv ul li {
     margin: 10px 0;
     flex-grow: 1;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #f2eacb;
     transition: transform 1s ease;
     transition: text-shadow 1s ease;

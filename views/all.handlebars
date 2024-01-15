@@ -1,0 +1,10 @@
+<div class="figurine-gallery">
+    {{#each figurines}}
+        <div class="figurine-card">
+            <img src="{{image}}" alt="{{name}} Figurine">
+            <h3>{{name}}</h3>
+            <p>Price: ${{price}}</p>
+            <button onclick="addToFavorites('{{name}}')">Add to Favorites</button>
+        </div>
+    {{/each}}
+</div>
