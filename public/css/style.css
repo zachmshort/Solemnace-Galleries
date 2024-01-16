@@ -240,8 +240,18 @@ z-index: 1;
     text-shadow: 5px 5px 0;
 }
 
+.factionTitle {
+    -webkit-text-stroke-width: 2px;
+}
 
-#xenosTitle, #allTitle, .xenos:hover {
+#allTitle {
+    color: white;
+    -webkit-text-stroke-color: grey;
+    text-shadow: 5px 5px 0 black;
+    font-size: 5rem;
+}
+
+#xenosTitle, .xenos:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #FFCED5;
     text-shadow: 5px 5px 0 #AF7178;
