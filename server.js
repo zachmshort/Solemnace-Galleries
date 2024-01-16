@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
+const { Figurine } = require('./models');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
@@ -36,9 +37,17 @@ app.get('/gallery', (req, res) => {
   res.render('gallery');
 });
 
-app.get('/all', (req, res) => {
-  res.render('all'); // , { figurine/figurines?? }
-});
+// app.get('/all', async (req, res) => {
+//   try {
+//     const figurineData = await Figurine.findAll();
+
+
+//     res.render('all', { figurines: figurineData });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 app.get('/xenos', (req, res) => {
   res.render('xenos'); // , { figurine/figurines?? }
