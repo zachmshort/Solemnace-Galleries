@@ -1,13 +1,15 @@
-const User = require("./User");
-const userFavourites = require("./userFavourites");
-const Figurine = require("./Figurine");
+const User = require("./user");
+const UserFavourites = require("./userFavourites");
+const Figurine = require("./figurine");
 
-// userFavourites.hasMany(Figurine, {
-//   foreignKey: "userFavourites_id",
-// });
 
-// Figurine.belongsTo(userFavourites, {
-//   foreignKey: "userFavourites_id",
-// });
+Figurine.hasMany(UserFavourites, {
+  foreignKey: "figurine_id",
+  onDelete: "CASCADE",
+});
 
-module.exports = { User, userFavourites, Figurine };
+UserFavourites.belongsTo(Figurine, {
+  foreignKey: "figurine_id",
+});
+
+module.exports = { User, UserFavourites, Figurine };

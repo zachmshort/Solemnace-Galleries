@@ -39,6 +39,8 @@ router.get("/all", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 router.get("/Necron", async (req, res) => {
   try {
     const catData = await Figurine.findAll({
