@@ -1,0 +1,21 @@
+[
+  {
+    "product_name": "Assault Intercessors",
+    "price": 60,
+    "edition": 9,
+    "filename": "intercess.jpg",
+    "faction": "Space Marines",
+    "store_link":
+      "https://www.warhammer.com/en-US/shop/Assault-Intercessors-2020"
+  },
+  {
+    "product_name": "Terminator Captain",
+    "price": 0,
+    "edition": 10,
+    "filename": "10thtermiecapt.jpg",
+    "faction": "Space Marines",
+    "store_link": "https://www.warhammer.com/en-US/home"
+  }
+  
+]
+
