@@ -1,3 +1,21 @@
+.figurineCards {
+    position:relative;
+    top: 10rem;
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.card-img-top {
+    max-height: 427.52px;
+    min-height: 427.52px;
+    min-width: 413.98px;
+    max-width: 413.98px;
+}
+
 .factionTitle {
     position: absolute;
     top: 3rem;
@@ -10,24 +28,12 @@
     z-index: 1;
 }
 
-.figurineCards {
-    position: relative;
-    top:10rem;
-}
 .factionTitle:hover {
     cursor: default;
 }
 
-.container {
-    top: 10rem;
-}
-
 #chaosTitle {
     top: 3.2rem;
-}
-
-.factionPage {
-    height: 200vh;
 }
 
 #spaceMarinesPage {
@@ -55,7 +61,9 @@
 }
 
 #allPage {
-    background-color: #000;
+    background-image: url('/images/warhammerbg3.webp');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .page {
@@ -80,7 +88,7 @@
     text-decoration: none;
     filter: brightness(1.1);
     z-index: 1; 
-    top:50%
+    top:45%
 }
 
 .page a:hover  {
@@ -107,14 +115,15 @@ z-index: 1;
 }
 
 .navContainer {
-    position: absolute;
+    position: fixed;
+    z-index: 1;
 }
 
 .navImg {
     max-width: 9rem;
     max-height: 9rem;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     margin-left: 1rem;
     margin-top: 2rem;
 
@@ -211,7 +220,7 @@ z-index: 1;
 .galleryDiv ul li {
     margin: 10px 0;
     flex-grow: 1;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: .1rem;
     -webkit-text-stroke-color: #f2eacb;
     transition: transform 1s ease;
     transition: text-shadow 1s ease;
@@ -232,41 +241,64 @@ z-index: 1;
     text-shadow: 5px 5px 0;
 }
 
+.factionTitle {
+    -webkit-text-stroke-width: 1px;
+    font-size: 5rem;
+}
 
-#xenosTitle, #allTitle, .xenos:hover {
-    color: #E0E0C4;
+#allTitle {
+    color: white;
+    -webkit-text-stroke-color: grey;
+    text-shadow: 5px 5px 0 black;
+    font-size: 5rem;
+}
+
+.xenos:hover, .aeldari:hover, .spaceMarines:hover, .imperialArmies:hover, .necron:hover, .chaos:hover, .allA:hover {
+    -webkit-text-stroke-width: 1px;
+    
+}
+
+.allA:hover {
+    color: white;
     -webkit-text-stroke-color: #FFCED5;
-    text-shadow: 5px 5px 0 #AF7178;
+    text-shadow: 3px 3px 0 rgb(143, 26, 26), 5px 5px 0 #C8B562;
+}
+
+#xenosTitle, .xenos:hover {
+    color: #E0E0C4;
+    -webkit-text-stroke-color: #da8995;
+    text-shadow: 3px 3px 0 #AF7178, 5px 5px 0 #C8B562;
 }
 
 #chaosTitle, .chaos:hover {
     color: #E0E0C4;
-    -webkit-text-stroke-color: #FFF8E9;
-    text-shadow: 5px 5px 0 #9A9592;
+    -webkit-text-stroke-color: #312b20;
+    text-shadow: 3px 3px 0 #9A9592, 5px 5px 0 #C8B562;
 }
 
 #spaceMarinesTitle, .spaceMarines:hover {
     color: #e6dec7;
     -webkit-text-stroke-color: #ecf02c;
-    text-shadow: 5px 5px 0 #63635b;
+    text-shadow: 3px 3px 0 darkgoldenrod, 5px 5px 0 #C8B562;
 }
 
 #imperialArmiesTitle, .imperialArmies:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #D9EBFF;
-    text-shadow: 5px 5px 0 #0b2a52;
+    text-shadow: 3px 3px 0 #0b2a52, 5px 5px 0 #C8B562;
 }
 
 #necronTitle, .necron:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #D4FFE5;
-    text-shadow: 5px 5px 0 #718B7C;
+    text-shadow: 3px 3px 0 #44805d, 5px 5px 0 #C8B562;
 }
 
 #aeldariTitle, .aeldari:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #DBC9FF;
-    text-shadow: 5px 5px 0 #807299;
+    text-shadow: 3px 3px 0 #807299, 5px 5px 0 #C8B562;
+    
 }
 
 .col {

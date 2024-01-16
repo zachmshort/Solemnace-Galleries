@@ -64,31 +64,40 @@ router.get("/all", async (req, res) => {
   }
 });
 
-router.get("/Necron", async (req, res) => {
+router.get("/necron", async (req, res) => {
   try {
     const catData = await Figurine.findAll({
       where: { faction: "Necron" },
     });
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    res.render('all', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-router.get("/Xenos", async (req, res) => {
+
+router.get("/xenos", async (req, res) => {
   try {
     const catData = await Figurine.findAll({
-      where: { faction: "Xenos" },
+      where: { faction: "xenos" },
     });
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    console.log(figurines);
+    res.render('xenos', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-router.get("/Chaos", async (req, res) => {
+router.get("/chaos", async (req, res) => {
   try {
     const catData = await Figurine.findAll({
-      where: { faction: "Chaos" },
+      where: { faction: "chaos" },
     });
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    console.log(figurines);
+    res.render('chaos', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
@@ -99,6 +108,9 @@ router.get("/space-marines", async (req, res) => {
     const catData = await Figurine.findAll({
       where: { faction: "Space Marines" },
     });
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    console.log(figurines);
+    res.render('spacemarines', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
@@ -109,6 +121,9 @@ router.get("/imperial-armies", async (req, res) => {
     const catData = await Figurine.findAll({
       where: { faction: "Imperium Armies" },
     });
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    console.log(figurines);
+    res.render('imperialarmies', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
@@ -119,6 +134,9 @@ router.get("/aeldari", async (req, res) => {
     const catData = await Figurine.findAll({
       where: { faction: "Aeldari" },
     });
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    console.log(figurines);
+    res.render('aeldari', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
