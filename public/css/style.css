@@ -1,8 +1,57 @@
+.factionTitle {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Pirata One', system-ui, sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.factionTitle:hover {
+    cursor: default;
+}
+
+#chaosTitle {
+    top: 3.2rem;
+}
+
+.factionPage {
+    height: 100vh;
+}
+
+#spaceMarinesPage {
+    background: #BF9B30;
+}
+
+#necronPage {
+    background-color: #698174;
+}
+
+#aeldariPage {
+    background-color: #7A6E8D;
+}
+
+#imperialArmiesPage {
+    background-color: #677990;
+}
+
+#xenosPage {
+    background-color: #AF7D83;
+}
+
+#chaosPage {
+    background-color: #827F79;
+}
+
 .page {
     background-image: url('/images/warhammer_homepage.jpg'); 
     background-size: cover;
     margin: 0;
     height: 100vh;
+    transition: opacity .05s ease-in-out;
 }
 
 .page a {
@@ -28,8 +77,8 @@
 
 .title {
 position: absolute;
-margin-top: 1rem;
-left: 80%;
+margin-top: 3rem;
+left: 77.5%;
 font-family: 'Pirata One', system-ui, sans-serif;
 font-weight: 300;
 font-size: 3rem;
@@ -78,6 +127,10 @@ z-index: 1;
 
 .dropdown-items ul li a:hover {
     filter: brightness(3);
+}
+
+.galleryDiv ul li a:visited {
+    -webkit-text-stroke-color: #f2eacb;
 }
 
 .navImg:hover {
@@ -167,37 +220,37 @@ z-index: 1;
 }
 
 
-.xenos:hover {
+#xenosTitle, .xenos:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #FFCED5;
     text-shadow: 5px 5px 0 #AF7178;
 }
 
-.chaos:hover {
+#chaosTitle, .chaos:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #FFF8E9;
     text-shadow: 5px 5px 0 #9A9592;
 }
 
-.spaceMarines:hover {
+#spaceMarinesTitle, .spaceMarines:hover {
     color: #e6dec7;
     -webkit-text-stroke-color: #ecf02c;
     text-shadow: 5px 5px 0 #63635b;
 }
 
-.imperialArmies:hover {
+#imperialArmiesTitle, .imperialArmies:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #D9EBFF;
-    text-shadow: 5px 5px 0 #65778E;
+    text-shadow: 5px 5px 0 #0b2a52;
 }
 
-.necron:hover {
+#necronTitle, .necron:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #D4FFE5;
     text-shadow: 5px 5px 0 #718B7C;
 }
 
-.aeldari:hover {
+#aeldariTitle, .aeldari:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #DBC9FF;
     text-shadow: 5px 5px 0 #807299;

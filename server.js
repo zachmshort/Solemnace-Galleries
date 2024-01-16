@@ -40,6 +40,30 @@ app.get('/all', (req, res) => {
   res.render('all'); // , { figurine/figurines?? }
 });
 
+app.get('/xenos', (req, res) => {
+  res.render('xenos'); // , { figurine/figurines?? }
+});
+
+app.get('/necron', (req, res) => {
+  res.render('necron'); // , { figurine/figurines?? }
+});
+
+app.get('/chaos', (req, res) => {
+  res.render('chaos'); // , { figurine/figurines?? }
+});
+
+app.get('/imperial-armies', (req, res) => {
+  res.render('imperialarmies'); // , { figurine/figurines?? }
+});
+
+app.get('/space-marines', (req, res) => {
+  res.render('spacemarines'); // , { figurine/figurines?? }
+});
+
+app.get('/aeldari', (req, res) => {
+  res.render('aeldari'); // , { figurine/figurines?? }
+});
+
 
 
 app.use(routes);
