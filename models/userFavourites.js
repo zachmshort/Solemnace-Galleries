@@ -11,11 +11,11 @@ UserFavourites.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // user_name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   references: { model: "user", key: "username" },
-    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: { model: "user", key: "id" },
+    },
     figurine_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
