@@ -1,7 +1,27 @@
 [
   {
-    "username": "Termagants",
-    "email": "bingus@aol.com",
+    "username": "magoo",
+    "email": "macrow.co@gmail.com",
+    "password": "$2b$10$OZrv7D0uzhjx7avMIZmKK.lqqCVNhbaJinoYMaspZpbE2xV3eROD2"
+  },
+  {
+    "username": "sparticus",
+    "email": "macro.co@gmail.com",
+    "password": "beansareedible"
+  },
+  {
+    "username": "steve",
+    "email": "macr.co@gmail.com",
     "password": "spaghetti"
+  },
+  {
+    "username": "bryn",
+    "email": "mac.co@gmail.com",
+    "password": "forksarecool"
+  },
+  {
+    "username": "mark",
+    "email": "ma.co@gmail.com",
+    "password": "astrology"
   }
 ]
