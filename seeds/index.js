@@ -1,12 +1,15 @@
 const sequelize = require("../config/connection");
-const seedFigurines = require("./figurineData");
+const figurineData = require("./figurineData.json");
+const {Figurine} = require("../models")
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
-
-  await seedFigurines();
+  await Figurine.bulkCreate(figurineData);
 
   process.exit(0);
+
 };
+
+
 
 seedAll();
