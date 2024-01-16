@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class userFavourites extends Model {}
+class UserFavourites extends Model {}
 
-userFavourites.init(
+UserFavourites.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,18 +16,18 @@ userFavourites.init(
     //   allowNull: false,
     //   references: { model: "user", key: "username" },
     // },
-    // figurine_id: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   references: { model: "Figurine", key: "id" },
-    // },
+    figurine_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: { model: "figurine", key: "id" },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "userFavourites",
+    modelName: "UserFavourites",
   }
 );
 
-module.exports = userFavourites;
+module.exports = UserFavourites;
