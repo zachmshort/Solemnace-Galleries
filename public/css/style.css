@@ -10,8 +10,16 @@
     z-index: 1;
 }
 
+.figurineCards {
+    position: relative;
+    top:10rem;
+}
 .factionTitle:hover {
     cursor: default;
+}
+
+.container {
+    top: 10rem;
 }
 
 #chaosTitle {
@@ -19,7 +27,7 @@
 }
 
 .factionPage {
-    height: 100vh;
+    height: 200vh;
 }
 
 #spaceMarinesPage {
@@ -44,6 +52,10 @@
 
 #chaosPage {
     background-color: #827F79;
+}
+
+#allPage {
+    background-color: #000;
 }
 
 .page {
@@ -104,7 +116,7 @@ z-index: 1;
     z-index: 2;
     position: absolute;
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 }
 
@@ -163,6 +175,7 @@ z-index: 1;
     height: 100vh;
     background-color: #000;
     transition: background-color 1s ease;
+    filter: brightness(.7);
 }
 
 .mainImage {
@@ -220,7 +233,7 @@ z-index: 1;
 }
 
 
-#xenosTitle, .xenos:hover {
+#xenosTitle, #allTitle, .xenos:hover {
     color: #E0E0C4;
     -webkit-text-stroke-color: #FFCED5;
     text-shadow: 5px 5px 0 #AF7178;
@@ -256,7 +269,42 @@ z-index: 1;
     text-shadow: 5px 5px 0 #807299;
 }
 
+.col {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    top: 15rem;
+}
 
-.signUp {
-    text-align: center;
+.login-card {
+    width: 15%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-card + .login-card {
+    margin-left:-25rem;
 }
