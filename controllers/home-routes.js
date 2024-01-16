@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET one gallery
+// example for later
 //http://localhost:3001/gallery
 router.get("/gallery/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
@@ -22,20 +22,6 @@ router.get("/gallery/:id", async (req, res) => {
   } else {
     // If the user is logged in, allow them to view the gallery
     try {
-      const dbGalleryData = await Gallery.findByPk(req.params.id, {
-        include: [
-          {
-            model: Figurine,
-            attributes: [
-              "id",
-              "title",
-              "creation_date",
-              "filename",
-              "description",
-            ],
-          },
-        ],
-      });
       const gallery = dbGalleryData.get({ plain: true });
       res.render("gallery", { gallery, loggedIn: req.session.loggedIn });
     } catch (err) {
