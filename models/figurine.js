@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Figurine extends Model {}
 
@@ -19,13 +19,11 @@ Figurine.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-    
     },
     edition: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      
     },
     filename: {
       type: DataTypes.STRING,
@@ -34,13 +32,12 @@ Figurine.init(
     faction: {
       type: DataTypes.STRING,
       allowNull: false,
-
-      },
-    store_link: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        },
     },
+    store_link: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  },
   {
     sequelize,
     freezeTableName: true,
@@ -50,4 +47,3 @@ Figurine.init(
 );
 
 module.exports = Figurine;
-
