@@ -48,8 +48,7 @@ router.get("/necron", async (req, res) => {
       where: { faction: "Necron" },
     });
     const figurines = catData.map((figurine)=>figurine.get({plain:true}));
-    console.log(figurines);
-    res.render('necron', {figurines});
+    res.render('all', {figurines});
     res.status(200).json(catData);
   } catch (err) {
     res.status(500).json(err);
