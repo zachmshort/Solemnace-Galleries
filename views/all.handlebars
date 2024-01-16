@@ -1,0 +1,37 @@
+<div class="factionPage" id="allPage">
+<h1 class="factionTitle" id="allTitle">All Factions</h1>
+<div class="figurineCards">
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{!-- {{#each figurines}} --}}
+            <div class="col">
+                <div class="card">
+                    {{!-- {{image}} {{name}} --}}
+                    <img src="/images/black.jpg" class="card-img-top" alt=" Figurine">
+                    <div class="card-body">
+                        {{!-- {{product_name}} --}}
+                        <h5 class="card-title">Figurine</h5>
+                        {{!-- {{price}} --}}
+                        <p class="card-text">Price: $50</p>
+                        {{!-- {{product_name}} --}}
+                        <button class="btn btn-primary" onclick="addToFavorites('')">Add to Favorites</button>
+                        <button class="btn btn-secondary" onclick="addToFavorites('')">Go to Website</button>
+                    </div>
+                </div>
+            </div>
+        {{!-- {{/each}} --}}
+    </div>
+</div>
+</div>
+</div>
+{{!-- <div class="figurine-gallery">
+    {{#each figurines}}
+        <div class="figurine-card">
+            <img src="{{image}}" alt="{{product_name}} Figurine">
+            <h3>{{product_name}}</h3>
+            <p>Price: ${{price}}</p>
+            <button onclick="addToFavorites('{{product_name}}')">Add to Favorites</button>
+            <a href="{{store_link}}">Go to Website</a>
+        </div>
+    {{/each}}
+</div> --}}
