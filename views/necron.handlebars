@@ -1,3 +1,23 @@
 <div class="factionPage" id="necronPage">
 <h1 class="factionTitle" id="necronTitle">Necron</h1>
+{{#each figurines as |figurine| }}
+<div class="figurineCards">
+<div class="container">
+    <div class="row row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="/assets/{{ figurine.filename }}" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ figurine.product_name }}</h5>
+                        <p class="card-text">${{ figurine.price }}</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('')">Add to Favorites</button>
+                        <a href="{{ figurine.store_link }}" class="btn btn-secondary">Go to Website</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+{{/each}}
+</div>
 </div>
