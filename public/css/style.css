@@ -273,7 +273,7 @@ z-index: 1;
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    top: 15rem;
+    top: 3rem;
 }
 
 .login-card {

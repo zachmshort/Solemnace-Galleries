@@ -34,12 +34,13 @@ router.get("/gallery/:id", async (req, res) => {
 router.get("/all", async (req, res) => {
   try {
     const catData = await Figurine.findAll({});
-    res.status(200).json(catData);
+    const figurines = catData.map((figurine)=>figurine.get({plain:true}));
+    console.log(figurines);
+    res.render('all', {figurines});
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 router.get("/Necron", async (req, res) => {
   try {
