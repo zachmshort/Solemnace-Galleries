@@ -126,7 +126,6 @@ z-index: 1;
     position: fixed;
     margin-left: 1rem;
     margin-top: 2rem;
-
 }
 
 .dropdown-items {
@@ -198,6 +197,7 @@ z-index: 1;
     opacity: 25%;
     min-width: 20vw;
     min-height: 60vh;
+    border-style:none;
 }
 
 .galleryDiv {
@@ -305,13 +305,14 @@ z-index: 1;
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    top: 3rem;
 }
 
-.login-card {
+.login-card, .signup-card {
     width: 15%;
     box-sizing: border-box;
     padding: 10px;
+    background: transparent;
+    box-shadow: -2px 7px 50px 15px black;
 }
 
 .form {
@@ -337,6 +338,132 @@ z-index: 1;
     cursor: pointer;
 }
 
-.login-card + .login-card {
+.login-card + .signup-card {
     margin-left:-25rem;
+}
+
+.loginPage {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/images/loginbg.png');
+    background-size: cover;
+}
+
+.page-title {
+    font-family: 'Mate SC', serif;
+    font-weight: 300;
+    font-size: 4rem;
+    color:darkred;
+    letter-spacing: 3px;
+    filter: brightness(1.1);
+    z-index: 2;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(145, 57, 57);
+    text-shadow: 2px 2px 5 white;
+}
+
+.form-input {
+    border-radius: 5px;
+    background-color:transparent;
+    box-shadow: -2px 7px 50px 15px black;
+    color: white;
+    padding:5px;
+    font-family: 'Domine', 'Times New Roman', Times, serif;
+}
+
+.form-input::placeholder {
+    color:whitesmoke;
+    font-family: 'Domine', 'Times New Roman', Times, serif;
+    font-weight: 100;
+    filter: contrast(100);
+}
+
+#signUpButton, #loginButton {
+    font-family: 'Mate SC', serif;
+    background-color: darkred;
+    border-style: none;
+}
+
+#signUpButton:hover, #loginButton:hover {
+    filter: brightness(1.2);
+}
+
+@media screen and (max-width: 1299px) {
+    .loginSignUpCards {
+        display: flex;
+    }
+    
+    .login-card,
+    .signup-card {
+        width: 25%;
+    }
+
+    .login-card + .signup-card {
+        margin-left: 10%; 
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .loginSignUpCards {
+        display:list-item;
+    }
+    
+    .login-card, .signup-card {
+        width: 65%;
+    }
+    
+    .login-card {
+        margin-left: 17.5%;
+        margin-top: 20%;
+    }
+
+    .login-card + .signup-card {
+        margin-top: 5%; 
+    }
+
+    .login-card + .signup-card {
+        margin-left: 17.5%;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-height: 760px) {
+    .navImg {
+        margin: 0;
+    }
+    .dropdown-items {
+        right: -8rem;
+    }
+    
+    .navImgDropDown {
+        max-width: 25rem;
+        max-height: 25rem;
+        margin-left: -.5rem;
+        top: 5rem;
+    }
+    
+    .login-card, .signup-card {
+        width: 65%;
+    }
+
+    .login-card + .signup-card {
+        margin-top: 5%; 
+    }
+    
+    .login-card {
+        margin-left: 17.5%;
+        margin-top: 15%;
+    }
+
+    .loginPage {
+        height: 120vh;
+    }
+    
 }
