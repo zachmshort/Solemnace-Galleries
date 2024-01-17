@@ -435,20 +435,6 @@ z-index: 1;
 }
 
 @media screen and (max-height: 760px) {
-    /* .navImg {
-        margin: 0;
-    }
-    .dropdown-items {
-        right: -8rem;
-    }
-    
-    .navImgDropDown {
-        max-width: 25rem;
-        max-height: 25rem;
-        margin-left: -.5rem;
-        top: 5rem;
-    }
-     */
     .login-card, .signup-card {
         width: 65%;
     }
@@ -465,7 +451,6 @@ z-index: 1;
     .loginPage {
         height: 120vh;
     }
-    
 }
 
 @media screen and (max-width: 1400px) {
@@ -498,5 +483,18 @@ z-index: 1;
 @media screen and (max-width: 653px) {
     .factionTitle {
         font-size: 2.5rem !important; 
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .factionsBtn {
+        font-size: 1.25rem !important; 
+    }
+
+}
+
+@media screen and (max-width: 1325px) {
+    .page {
+        background-position: right;
     }
 }
