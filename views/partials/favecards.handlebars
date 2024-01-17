@@ -1,4 +1,4 @@
-{{#each filtered as |figurine|}}
+d{{#each filtered as |figurine|}}
   <div class="col">
     <div class="card">
       <img
@@ -9,7 +9,10 @@
       <div class="card-body">
         <h5 class="card-title"> {{figurine.figurine.product_name}}</h5>
         <p class="card-text">${{figurine.figurine.price}}.00</p>
-        <button class="btn btn-primary" onclick="deleteFave('')">Delete Favorite</button>
+        <button
+          class="btn btn-primary"
+          onclick="deleteFave({{figurine.id}})"
+        >Delete Favorite</button>
         <a href="{{figurine.figurine.store_link}}" class="btn btn-secondary">Go
           to Website</a>
       </div>
