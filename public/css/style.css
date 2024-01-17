@@ -392,6 +392,21 @@ z-index: 1;
     filter: brightness(1.2);
 }
 
+@media screen and (max-width: 1600px) {
+    .login-card + .signup-card {
+        margin-left: 15%; 
+    }
+
+    .login-card,
+    .signup-card {
+        width: 25%;
+    }
+
+    .loginPage {
+        background-position: center top;
+    }
+}
+
 @media screen and (max-width: 1299px) {
     .loginSignUpCards {
         display: flex;
@@ -445,7 +460,7 @@ z-index: 1;
     
     .login-card {
         margin-left: 17.5%;
-        margin-top: 15%;
+        margin-top: 40%;
     }
 
     .loginPage {
