@@ -28,7 +28,12 @@ router.get("/my-favorites/:id", async (req, res) => {
     const filtered = await figurinesData.filter(
       (data) => data.user_id === userId
     );
-    res.render("all", { filtered });
+    console.log(filtered);
+    res.render("favorites", {
+      filtered,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -57,7 +62,11 @@ router.get("/all", async (req, res) => {
     const catData = await Figurine.findAll({});
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("all", { figurines });
+    res.render("all", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -70,7 +79,11 @@ router.get("/necron", async (req, res) => {
     });
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("necron", { figurines });
+    res.render("necron", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -82,7 +95,11 @@ router.get("/Xenos", async (req, res) => {
     });
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("xenos", { figurines });
+    res.render("xenos", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -94,7 +111,11 @@ router.get("/Chaos", async (req, res) => {
     });
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("chaos", { figurines });
+    res.render("chaos", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -106,7 +127,11 @@ router.get("/space-marines", async (req, res) => {
     });
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("spacemarines", { figurines });
+    res.render("spacemarines", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -118,7 +143,11 @@ router.get("/imperial-armies", async (req, res) => {
     });
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("imperialarmies", { figurines });
+    res.render("imperialarmies", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -130,7 +159,11 @@ router.get("/aeldari", async (req, res) => {
     });
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
-    res.render("aeldari", { figurines });
+    res.render("aeldari", {
+      figurines,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
