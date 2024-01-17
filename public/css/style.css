@@ -1,3 +1,11 @@
+body {
+    cursor: url('/images/hammer.png'), auto;
+}
+
+.factionsBtn:hover, a:hover, .navImg:hover, .btn:hover, .form-input:hover {
+    cursor: url('/images/hammerhover.png'), auto !important;
+}
+
 .figurineCards {
     position:relative;
     top: 10rem;
@@ -26,10 +34,6 @@
     font-size: 4rem;
     letter-spacing: 1px;
     z-index: 1;
-}
-
-.factionTitle:hover {
-    cursor: default;
 }
 
 #chaosTitle {
@@ -237,7 +241,6 @@ z-index: 1;
     font-family: 'Pirata One', system-ui, sans-serif;
     color: transparent;
     transition: transform 1s ease;
-    cursor: pointer;
     text-shadow: 5px 5px 0;
 }
 
@@ -335,7 +338,6 @@ z-index: 1;
     padding: 10px 15px;
     border: none;
     border-radius: 3px;
-    cursor: pointer;
 }
 
 .login-card + .signup-card {

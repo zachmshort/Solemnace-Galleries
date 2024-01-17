@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var opacity = 0;
     var interval = setInterval(function () {
       if (opacity < 1) {
-        opacity += 0.125;
+        opacity += 0.5;
         element.style.opacity = opacity;
       } else {
         clearInterval(interval);
