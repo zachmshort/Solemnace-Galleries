@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.userId = dbUserData.id;
       res.status(200).json(dbUserData);
     });
   } catch (err) {
@@ -63,8 +63,10 @@ router.post("/login", async (req, res) => {
 // localhost/user/favourite
 router.post("/favourite", async (req, res) => {
   try {
+    const userId = parseInt(req.session.userId)
+    console.log(userId)
     const newFav = await UserFavourites.create({
-      user_id: req.body.user_id,
+      user_id: userId,
       figurine_id: req.body.figurine_id,
     });
     res.status(200).json(newFav);

@@ -5,8 +5,7 @@
       <div class="card-body">
         <h5 class="card-title"> {{figurine.product_name}}</h5>
         <p class="card-text">${{figurine.price}}.00</p>
-        <button class="btn btn-primary" onclick="addToFavorites()">Add to
-          Favorites</button>
+        <button class="btn btn-primary" onclick="addToFavorites('{{figurine.id}}')"> Add To Favorites</button>
         <a href="{{figurine.store_link}}" class="btn btn-secondary">Go to
           Website</a>
       </div>
