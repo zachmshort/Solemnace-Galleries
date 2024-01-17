@@ -198,6 +198,7 @@ z-index: 1;
     opacity: 25%;
     min-width: 20vw;
     min-height: 60vh;
+    border-style:none;
 }
 
 .galleryDiv {
