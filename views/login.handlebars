@@ -1,40 +1,36 @@
-<div class="col">
+<div class="loginPage">
+<div class="col loginSignUpCards">
   <div class="login-card">
     <h2 class="page-title">Login</h2>
     <form class="form login-form">
       <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
+        <input class="form-input" type="text" id="email-login" placeholder="Email"/>
       </div>
       <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
+        <input class="form-input" type="password" id="password-login" placeholder="Password"/>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">Login</button>
+        <button class="btn btn-danger" id="loginButton" type="submit">Login</button>
       </div>
     </form>
   </div>
-  <div class="login-card">
+  <div class="signup-card">
     <h2 class="page-title">Sign Up</h2>
     <form class="form signup-form">
       <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
+        <input class="form-input" type="text" id="username-signup" placeholder="Username"/>
       </div>
       <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+        <input class="form-input" type="text" id="email-signup" placeholder="Email"/>
       </div>
       <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
+        <input class="form-input" type="password" id="password-signup" placeholder="Password"/>
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Sign Up</button>
+      <div class="form-group" class="userInputs">
+        <button class="btn btn-danger" id="signUpButton" type="submit">Sign Up</button>
       </div>
     </form>
   </div>
 </div>
-
+</div>
 <script src="./js/login.js"></script>
