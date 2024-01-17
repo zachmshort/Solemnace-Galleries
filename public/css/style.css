@@ -498,3 +498,13 @@ z-index: 1;
         background-position: right;
     }
 }
+
+@media screen and (max-width: 465px) { 
+    .galleryDiv ul li a {
+        font-size: 2rem;
+    }
+
+    .galleryDiv ul li {
+        line-height: 2rem !important;
+    }
+}
