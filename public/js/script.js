@@ -99,3 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+async function addToFavorites(figurine) {
+  console.log(typeof figurine)
+  await fetch("/api/users/favourite", {method:"POST", headers: {"Accept": "application/json", "Content-Type": "application/json"}, body:JSON.stringify({"figurine_id": figurine})})
+}

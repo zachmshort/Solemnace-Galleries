@@ -4,8 +4,19 @@ const { User, Figurine, UserFavourites } = require("../models");
 // GET all galleries for homepage
 router.get("/", async (req, res) => {
   try {
-    console.log(req.session);
+    console.log(req.session.userId);
     res.render("homepage", {
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+router.get("/gallery", async (req, res) => {
+  try {
+    res.render("gallery", {
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
