@@ -60,11 +60,11 @@ router.post("/login", async (req, res) => {
 });
 
 //user add to favorites
-// localhost/user/favourite
+// localhost//api/users/favourite
 router.post("/favourite", async (req, res) => {
   try {
-    const userId = parseInt(req.session.userId)
-    console.log(userId)
+    const userId = parseInt(req.session.userId);
+    console.log(userId);
     const newFav = await UserFavourites.create({
       user_id: userId,
       figurine_id: req.body.figurine_id,
@@ -72,6 +72,22 @@ router.post("/favourite", async (req, res) => {
     res.status(200).json(newFav);
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+//delete favourite
+//
+router.delete("/delete/:id", async (req, res) => {
+  console.log(req.params.id);
+  try {
+    const favData = await UserFavourites.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(favData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
