@@ -4,10 +4,14 @@ const { User, Figurine, UserFavourites } = require("../models");
 // GET all galleries for homepage
 router.get("/", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
+
     console.log(req.session.userId);
     res.render("homepage", {
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     console.log(err);
@@ -16,9 +20,13 @@ router.get("/", async (req, res) => {
 });
 router.get("/gallery", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, { attributes: ['username'] });
+    const username = user ? user.username : null;
+
     res.render("gallery", {
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     console.log(err);
@@ -28,9 +36,12 @@ router.get("/gallery", async (req, res) => {
 
 router.get("/my-favorites/:id", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const userId = parseInt(req.params.id);
     const catData = await UserFavourites.findAll({
       include: [{ model: Figurine }, { model: User }],
+      
     });
     const figurinesData = await catData.map((figurine) =>
       figurine.get({ plain: true })
@@ -44,6 +55,7 @@ router.get("/my-favorites/:id", async (req, res) => {
       filtered,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -70,6 +82,8 @@ router.get("/gallery/:id", async (req, res) => {
 
 router.get("/all", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const catData = await Figurine.findAll({});
     const figurines = catData.map((figurine) => figurine.get({ plain: true }));
     console.log(figurines);
@@ -77,6 +91,7 @@ router.get("/all", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -85,6 +100,8 @@ router.get("/all", async (req, res) => {
 
 router.get("/necron", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const catData = await Figurine.findAll({
       where: { faction: "Necron" },
     });
@@ -94,6 +111,7 @@ router.get("/necron", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -101,6 +119,8 @@ router.get("/necron", async (req, res) => {
 });
 router.get("/Xenos", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;   
     const catData = await Figurine.findAll({
       where: { faction: "Xenos" },
     });
@@ -110,6 +130,7 @@ router.get("/Xenos", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -117,6 +138,8 @@ router.get("/Xenos", async (req, res) => {
 });
 router.get("/Chaos", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const catData = await Figurine.findAll({
       where: { faction: "Chaos" },
     });
@@ -126,6 +149,7 @@ router.get("/Chaos", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -133,6 +157,8 @@ router.get("/Chaos", async (req, res) => {
 });
 router.get("/space-marines", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const catData = await Figurine.findAll({
       where: { faction: "Space Marines" },
     });
@@ -142,6 +168,7 @@ router.get("/space-marines", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -149,6 +176,8 @@ router.get("/space-marines", async (req, res) => {
 });
 router.get("/imperial-armies", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const catData = await Figurine.findAll({
       where: { faction: "Imperium Armies" },
     });
@@ -158,6 +187,7 @@ router.get("/imperial-armies", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -165,6 +195,8 @@ router.get("/imperial-armies", async (req, res) => {
 });
 router.get("/aeldari", async (req, res) => {
   try {
+    const user = await User.findByPk(req.session.userId, {attributes:['username'] });
+    const username = user ? user.username : null;
     const catData = await Figurine.findAll({
       where: { faction: "Aeldari" },
     });
@@ -174,6 +206,7 @@ router.get("/aeldari", async (req, res) => {
       figurines,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
+      username: username,
     });
   } catch (err) {
     res.status(500).json(err);
