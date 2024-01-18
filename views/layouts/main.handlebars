@@ -29,11 +29,15 @@
             <li><p class="userWelcome">Welcome {{ user.username }}</p></li>
           {{/if}}
           <li><a class="dropdown-item" href="/gallery">Factions</a></li>
+          {{#if loggedIn}}
           <li><a
               class="dropdown-item"
               id="faveButton"
               href="/my-favorites/{{userId}}"
             >Favorites</a></li>
+          {{else}}
+            <li><a class="dropdown-item" href="/login">Favorites</a></li>
+          {{/if}}
           {{#if loggedIn}}
             <li><button
                 id="logout"
