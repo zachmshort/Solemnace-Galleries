@@ -1,6 +1,6 @@
 # Solemnace Galleries
 
-Contributors : [Macguire Wilson](https://github.com/MacroWil), [Bryn Glofelty](https://github.com/Bryncidently), [Patrick Mulville](https://github.com/pmulville/), [Zachary Short](https://github.com/zachmshort/)
+Contributors : [Maguire Wilson](https://github.com/MacroWil), [Bryn Glofelty](https://github.com/Bryncidently), [Patrick Mulville](https://github.com/pmulville/), [Zachary Short](https://github.com/zachmshort/)
 
 Welcome to Solemnace Galleries, a Warhammer Miniatures Database! This web application allows users to view and manage a database of Warhammer miniatures, helping them create, share, and organize lists of armies. Whether you're a seasoned Warhammer enthusiast or a newcomer, this app provides a user-friendly experience to explore and plan your miniature collections.
 
