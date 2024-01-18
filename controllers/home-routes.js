@@ -62,24 +62,6 @@ router.get("/my-favorites/:id", async (req, res) => {
   }
 });
 
-// example for later
-//http://localhost:3001/gallery
-router.get("/gallery/:id", async (req, res) => {
-  // If the user is not logged in, redirect the user to the login page
-  if (!req.session.loggedIn) {
-    res.redirect("/login");
-  } else {
-    // If the user is logged in, allow them to view the gallery
-    try {
-      const gallery = dbGalleryData.get({ plain: true });
-      res.render("gallery", { gallery, loggedIn: req.session.loggedIn });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  }
-});
-
 router.get("/all", async (req, res) => {
   try {
     const user = await User.findByPk(req.session.userId, {attributes:['username'] });
