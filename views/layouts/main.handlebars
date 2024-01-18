@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <title>Solemnace Galleries</title>
   </head>
 
@@ -26,7 +27,7 @@
       <div class="dropdown-items">
         <ul>
           {{#if loggedIn}}
-            <li><p class="userWelcome">Welcome {{username}}</p></li>
+            <li class=""userLi><a href="/my-favorites/{{userId}}" class="userWelcome">Welcome <a href="/my-favorites/{{userId}}" class="usernameDisplay">{{username}}</a></a></li>
           {{/if}}
           <li><a class="dropdown-item" href="/gallery">Factions</a></li>
           {{#if loggedIn}}

@@ -2,8 +2,14 @@ body {
     cursor: url('/images/hammer.png'), auto;
 }
 
+
+
 .factionsBtn:hover, a:hover, .navImg:hover, .btn:hover, .form-input:hover, .dropdown-item:hover {
     cursor: url('/images/hammerhover.png'), auto !important;
+}
+
+.userWelcome:hover, .userLi:hover, .usernameDisplay:hover {
+    cursor: url('/images/hammer.png'), auto;  
 }
 
 .page {
@@ -16,8 +22,25 @@ body {
     justify-content: center;
 }
 
+.usernameDisplay {
+    font-size: 1.734rem;
+    color: darkred;
+    font-family: 'Pirata One', serif;
+    text-decoration: none;
+}
+
+
+
+.userWelcome {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
 .text-container {
     display: inline-block;
+    z-index: 1;
 }
 
 .page a:hover  {
