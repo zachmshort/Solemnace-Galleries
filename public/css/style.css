@@ -161,7 +161,11 @@ body {
     background-size: cover;
 }
 
-
+#favoritePage {
+    background-image: url('/images/warhammerfavoritebg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 .title {
 position: absolute;
@@ -485,6 +489,17 @@ z-index: 1;
 
     .login-card + .signup-card {
         margin-left: 10%; 
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .text-container p, .text-container a {
+        font-size: 1rem;
+        max-width: 100vw;
+    }
+    
+    .text-container {
+        max-width: 100vw;
     }
 }
 
