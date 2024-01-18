@@ -25,6 +25,9 @@
       <img src="/images/yellowed-paper.png" class="navImgDropDown" />
       <div class="dropdown-items">
         <ul>
+          {{#if loggedIn}}
+            <li><p class="userWelcome">Welcome {{ user.username }}</p></li>
+          {{/if}}
           <li><a class="dropdown-item" href="/gallery">Factions</a></li>
           <li><a
               class="dropdown-item"

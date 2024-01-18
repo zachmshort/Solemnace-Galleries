@@ -2,7 +2,7 @@ body {
     cursor: url('/images/hammer.png'), auto;
 }
 
-.factionsBtn:hover, a:hover, .navImg:hover, .btn:hover, .form-input:hover {
+.factionsBtn:hover, a:hover, .navImg:hover, .btn:hover, .form-input:hover, .dropdown-item:hover {
     cursor: url('/images/hammerhover.png'), auto !important;
 }
 
@@ -149,7 +149,7 @@ z-index: 1;
     list-style: none;
 }
 
-.dropdown-items ul li a:hover {
+.dropdown-items ul li a:hover, #logout:hover {
     filter: brightness(3);
 }
 
