@@ -116,6 +116,7 @@ async function deleteFave(figurine) {
   window.location.reload();
 }
 
+
 const textContainer = document.querySelector('.text-container');
     const text = textContainer.querySelector('p');
     const warhammerLink = document.getElementById('enterWarhammerBtn');
@@ -123,7 +124,8 @@ const textContainer = document.querySelector('.text-container');
     
     const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
     
-    tl.from(splitText.chars, { opacity: 0, x: -1000, y: -500, rotateX: -90, rotateY: 1000, stagger: .01, duration: 3 })
+    tl.fromTo(textContainer, { opacity: 0, y: "-100vh" }, { opacity: 1, y: "0", duration: 0 })
+        .from(splitText.chars, { opacity: 0, x: -1000, y: -500, rotateX: -90, rotateY: 1000, stagger: .01, duration: 3 })
         .to(splitText.chars, { opacity: 0, y: 0, rotateX: 90, rotateY: -90, stagger: .01, duration: 1 }, '-=.01')
         .set(warhammerLink, { opacity: 0, display: 'inline-block' })
         .to(warhammerLink, { opacity: 1, duration: .5, delay: 0 });
